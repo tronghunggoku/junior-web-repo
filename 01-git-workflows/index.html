@@ -37,6 +37,51 @@
         </div>
       </div>
     </section>
+
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2 class="section-title">Kỹ Năng Git Cần Đạt (Rubric)</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>1. Atomic Commits</h3>
+            <p>Chia nhỏ các câu lệnh `git commit` thành từng đơn vị chức năng duy nhất, tuân thủ Conventional Commits.</p>
+          </div>
+          <div class="card">
+            <h3>2. Git Flow & PR</h3>
+            <p>Tạo nhánh feature chuẩn xác, đẩy PR lên remote với mô tả đầy đủ ngữ cảnh và checklist.</p>
+          </div>
+          <div class="card">
+            <h3>3. Conflict Resolution</h3>
+            <p>Tự tay rebase/merge và resolve xung đột code mà không làm mất dòng code quan trọng nào.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cheatsheet" class="cheatsheet-section">
+      <div class="container">
+        <h2 class="section-title">Bảng Tra Cứu Câu Lệnh Git Thiết Yếu</h2>
+        <div class="code-block">
+          <pre><code># 1. Khởi tạo & kiểm tra
+git init
+git status
+git log --oneline --graph
+
+# 2. Tạo nhánh & chuyển nhánh
+git checkout -b feature/tinh-nang-moi
+git switch main
+
+# 3. Commit theo quy chuẩn
+git add .
+git commit -m "feat(scope): mo ta ngan gon"
+
+# 4. Dong bo & Rebase gỡ conflict
+git fetch origin
+git rebase main
+git push --force-with-lease origin feature/tinh-nang-moi</code></pre>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
