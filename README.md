@@ -8,7 +8,8 @@ Repository chứa tất cả các bài tập và dự án thực hành trong kh�
 
 | STT | Bài tập | Mô tả | Trạng thái |
 | :--- | :--- | :--- | :--- |
-| **01** | [`01-git-workflows`](./01-git-workflows) | Thực hành Git Workflow, Conventional Commits, PR End-to-End & Resolve Conflict | 🚀 In Progress |
+| **01** | [`01-git-workflows`](./01-git-workflows) | Thực hành Git Workflow, Conventional Commits, PR End-to-End & Resolve Conflict | ✅ Completed |
+| **02** | [`02-semantic-tailwind`](./02-semantic-tailwind) | Semantic Web HTML5 Landmark & Tailwind CSS Utility Components (Hero & Card Block) | 🚀 In Progress |
 
 ---
 
