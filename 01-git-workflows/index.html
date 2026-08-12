@@ -111,6 +111,17 @@ git push --force-with-lease origin feature/tinh-nang-moi</code></pre>
         <a href="https://github.com/tronghunggoku/junior-web-repo" target="_blank">GitHub Repository</a>
       </div>
     </div>
-  </footer>
+  <script>
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      if (!email.includes('@') || !email.includes('.')) {
+        alert('Vui lòng nhập địa chỉ email hợp lệ!');
+        return;
+      }
+      alert('✅ Cảm ơn bạn! Bài tập/Phản hồi của bạn đã được gửi thành công đến Mentor.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
