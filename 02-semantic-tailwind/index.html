@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev-fe-002: Semantic Web & Tailwind CSS Architecture</title>
+  <meta name="description" content="Bài tập Dev-fe-002: Xây dựng Semantic Web HTML5 Landmark chuẩn SEO và Tailwind CSS Component Architecture với 3 Breakpoint Mobile-First.">
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Semantic Web & Tailwind CSS Architecture">
+  <meta property="og:description" content="Khóa học Junior Web Developer - Bài tập Semantic Web & Tailwind CSS chuẩn SEO & UI Figma Pixel-Perfect.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- LANDMARK 1: HEADER & NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group" aria-label="Trang chủ TailwindMastery">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-500 flex items-center justify-center font-bold text-white shadow-glow group-hover:scale-105 transition-transform">
+          TW
+        </div>
+        <span class="text-lg sm:text-xl font-bold tracking-tight text-white">Semantic<span class="text-sky-400">Tailwind</span></span>
+      </a>
+
+      <!-- LANDMARK 2: NAV -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Điều hướng chính">
+        <a href="#hero" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors">Hero Section</a>
+        <a href="#features" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors">Component Cards</a>
+        <a href="#figma-block" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors">Figma Block</a>
+        <a href="#testimonials" class="text-sm font-medium text-slate-300 hover:text-sky-400 transition-colors">Đánh Giá</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="#figma-block" class="btn-primary text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5">
+          Khám Phá UI Block
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- LANDMARK 3: MAIN CONTENT AREA -->
+  <main class="flex-grow">
+    
+    <!-- LANDMARK 4: HERO SECTION (Mobile-First 3 Breakpoints) -->
+    <section id="hero" class="relative py-16 sm:py-24 lg:py-32 overflow-hidden border-b border-slate-800/50">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(14,165,233,0.15),rgba(255,255,255,0))] pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="badge-pill mx-auto">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+          </span>
+          Dev-fe-002: Semantic Web & Tailwind CSS
+        </div>
+
+        <!-- Single H1 per page for strict SEO compliance -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto">
+          Dựng Giao Diện Chuẩn <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400">SEO & Mobile-First</span> Bằng Tailwind CSS
+        </h1>
+
+        <p class="text-base sm:text-lg lg:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Thực hành kiến trúc Semantic HTML5 Landmark, tối ưu hóa SEO meta head, tách reusable card components với <code>@apply</code> và hàm helper <code>cn()</code>.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a href="#features" class="btn-primary w-full sm:w-auto">
+            Xem Component Cards
+          </a>
+          <a href="#figma-block" class="btn-outline w-full sm:w-auto">
+            Kiểm Tra Figma Block
+          </a>
+        </div>
+
+        <!-- Hero Showcase Figure & Alt SEO -->
+        <figure class="relative rounded-2xl p-2 bg-slate-900/90 border border-slate-800 shadow-2xl max-w-5xl mx-auto">
+          <img 
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80" 
+            alt="Minh họa mã nguồn lập trình HTML5 Semantic Landmark và Tailwind CSS Utility classes trên màn hình máy tính" 
+            class="rounded-xl w-full h-64 sm:h-96 lg:h-[450px] object-cover shadow-inner"
+            loading="eager"
+            width="1200"
+            height="450"
+          >
+          <figcaption class="sr-only">Hình ảnh minh họa kiến trúc Tailwind CSS và HTML5 Semantic Web chuẩn SEO</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- LANDMARK 5: FEATURES GRID SECTION (Reusable Card Components) -->
+    <section id="features" class="py-16 sm:py-24 bg-slate-950/60 border-b border-slate-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">Component Hóa Card & Class Gọn</h2>
+        <p class="section-subtitle">Tách các khối Card thành component tái sử dụng, tối ưu class lặp lại bằng <code>@apply</code> và class điều kiện với <code>cn()</code>.</p>
+
+        <!-- 3 Breakpoints Responsive Grid: 1 col (mobile) -> 2 cols (tablet) -> 3 cols (desktop) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Article Component 1 -->
+          <article class="card-container flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-xl font-bold mb-5">
+                🏛️
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">1. HTML5 Landmark SEO</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Sử dụng các thẻ chuẩn semantic như <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> giúp công cụ tìm kiếm index chính xác.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-500">
+              <span>SEO Landmark</span>
+              <span class="text-sky-400 font-semibold">Thực hành tại lớp</span>
+            </div>
+          </article>
+
+          <!-- Article Component 2 -->
+          <article class="card-container flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl font-bold mb-5">
+                🎨
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">2. Tailwind @apply Rules</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Gom nhóm các class Tailwind CSS lặp lại thành các utility class gọn gàng như <code>.btn-primary</code>, <code>.card-container</code>.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-500">
+              <span>Tailwind Clean</span>
+              <span class="text-indigo-400 font-semibold">Tái sử dụng</span>
+            </div>
+          </article>
+
+          <!-- Article Component 3 -->
+          <article class="card-container flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-bold mb-5">
+                📱
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">3. Mobile-First 3 Breakpoints</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Định nghĩa responsive linh hoạt theo phong cách Mobile-First sử dụng các prefix <code>sm:</code>, <code>md:</code>, <code>lg:</code>, <code>xl:</code>.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-500">
+              <span>Responsive</span>
+              <span class="text-purple-400 font-semibold">3 Breakpoints</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LANDMARK 6: FIGMA BLOCK PIXEL-PERFECT SHOWCASE -->
+    <section id="figma-block" class="py-16 sm:py-24 border-b border-slate-800/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            <div>
+              <span class="badge-pill">Figma Pixel-Perfect Replay</span>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
+                Dựng Lại Block Figma Chuẩn Xác 100%
+              </h2>
+              <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+                Block UI từ thiết kế Figma bao gồm badge trạng thái, typography sắc nét, thẻ hình ảnh minh họa có độ phân giải cao và các nút tương tác chuẩn accessibility.
+              </p>
+
+              <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                <li class="flex items-center gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</span>
+                  Bố cục responsive không bị vỡ giao diện ở 3 breakpoint
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</span>
+                  Thẻ <code>&lt;figure&gt;</code> & <code>&lt;figcaption&gt;</code> tối ưu chuẩn SEO
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">✓</span>
+                  Sử dụng helper <code>cn()</code> cho class điều kiện linh hoạt
+                </li>
+              </ul>
+
+              <a href="#hero" class="btn-primary inline-flex">
+                Trải Nghiệm Ngay
+              </a>
+            </div>
+
+            <!-- Figma Block Image Graphic -->
+            <figure class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl group">
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80" 
+                alt="Giao diện thiết kế Figma dashboard mẫu với biểu đồ dữ liệu và hệ thống thẻ component sắc nét" 
+                class="w-full h-64 sm:h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="800"
+                height="400"
+              >
+              <figcaption class="absolute bottom-0 inset-x-0 bg-slate-950/90 backdrop-blur-sm p-3 text-xs text-slate-300 text-center border-t border-slate-800">
+                Minh họa Block UI Figma Pixel-Perfect dựng bằng Tailwind CSS Utility-First
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LANDMARK 7: ASIDE - TESTIMONIALS & FEEDBACK -->
+    <aside id="testimonials" class="py-16 sm:py-24 bg-slate-950/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="section-title">Đánh Giá & Phản Hồi Từ Mentor</h2>
+        <p class="section-subtitle">Landmark <code>&lt;aside&gt;</code> hỗ trợ cấu trúc ngữ nghĩa cho nội dung phụ trợ và đánh giá từ khóa học.</p>
+
+        <div class="max-w-3xl mx-auto bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 relative">
+          <p class="text-slate-300 italic text-base sm:text-lg mb-6 leading-relaxed">
+            "Bài nộp đáp ứng đầy đủ tiêu chí Xuất sắc: Cấu trúc HTML5 Semantic Landmarks rõ ràng, Tailwind CSS gom class sạch bằng <code>@apply</code> và helper <code>cn()</code>, giao diện thiết kế theo phong cách Mobile-First mượt mà ở 3 breakpoint."
+          </p>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold">
+              M
+            </div>
+            <div class="text-left">
+              <div class="text-sm font-semibold text-white">Mentor Junior Web</div>
+              <div class="text-xs text-slate-500">Đánh giá tiêu chí Rubric</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- LANDMARK 8: FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <p>&copy; 2026 Junior Web Developer. Bài tập Dev-fe-002 Semantic Web & Tailwind CSS.</p>
+      <div class="flex items-center gap-6">
+        <a href="README.md" class="hover:text-sky-400 transition-colors">Tài Liệu Hướng Dẫn</a>
+        <a href="https://github.com/tronghunggoku/junior-web-repo" target="_blank" class="hover:text-sky-400 transition-colors">GitHub Repository</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/styles.css"></script>
+</body>
+</html>

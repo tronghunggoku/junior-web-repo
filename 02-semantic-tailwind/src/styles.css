@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white;
+  }
+}
+
+/* 
+  Sử dụng @apply gom các class bị lặp lại theo yêu cầu bài tập
+*/
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold bg-sky-500 text-white hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-950 transition-all duration-200 shadow-glow;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold border border-slate-700 text-slate-200 hover:bg-slate-800/80 hover:border-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-500 transition-all duration-200;
+  }
+
+  .badge-pill {
+    @apply inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-4;
+  }
+
+  .card-container {
+    @apply bg-slate-900/80 border border-slate-800 hover:border-sky-500/50 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-500/5 backdrop-blur-sm;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mb-4 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-slate-400 text-base sm:text-lg max-w-2xl mx-auto text-center mb-12;
+  }
+}
