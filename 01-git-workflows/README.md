@@ -20,3 +20,19 @@ Thư mục này chứa bài tập thực hành Quy trình Git chuyên nghiệp, 
 - ✅ **Commit & Lịch sử:** Lịch sử nguyên tử, rõ ràng, sạch đẹp.
 - ✅ **Xử lý Conflict:** Tự gỡ conflict gọn gàng, giữ nguyên tính toàn vẹn của code.
 - ✅ **Pull Request:** Đúng quy chuẩn, tự review trước khi gửi.
+
+---
+
+## 📝 Quy Chuẩn Conventional Commits
+- `feat`: Thêm tính năng mới (ví dụ: `feat(contact): add form submission`).
+- `fix`: Sửa lỗi bug (ví dụ: `fix(auth): fix token expiration issue`).
+- `docs`: Cập nhật tài liệu (ví dụ: `docs: update README setup guide`).
+- `style`: Thay đổi UI/CSS không ảnh hưởng logic (ví dụ: `style: fix navbar padding`).
+- `refactor`: Tái cấu trúc code nhưng không thay đổi chức năng.
+- `test`: Bổ sung hoặc sửa đổi unit tests.
+
+---
+
+## 🚀 Hướng Dẫn Chạy Dự Án
+Mở file `01-git-workflows/index.html` trực tiếp trên trình duyệt hoặc sử dụng extension **Live Server** trong VS Code.
+
