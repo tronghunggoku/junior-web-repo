@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trang giới thiệu bản thân - Nguyễn Trọng Hùng Junior Frontend Engineer Portfolio xây dựng hoàn toàn bằng Semantic HTML5 chuẩn SEO và Accessibility.">
+  <meta name="author" content="Nguyễn Trọng Hùng - Junior Frontend Engineer">
+  <title>Nguyễn Trọng Hùng | Junior Frontend Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="header-container">
+      <a href="#top" class="brand-logo" aria-label="Về đầu trang cá nhân của Trọng Hùng">
+        <span class="brand-logo__text">TrongHung.dev</span>
+      </a>
+
+      <nav class="main-navigation" aria-label="Thanh điều hướng chính của trang">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">Giới Thiệu</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Kỹ Năng</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Dự Án</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Kinh Nghiệm</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link nav-link--cta">Liên Hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="portfolio-main">
+
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="hero-badge">Xin chào, tôi là</p>
+        <h1 id="hero-title" class="hero-title">Nguyễn Trọng Hùng</h1>
+        <p class="hero-subtitle">Junior Frontend Engineer</p>
+        <p class="hero-summary">
+          Kỹ sư phát triển giao diện người dùng chú trọng khả năng tiếp cận chuẩn 
+          <strong>WCAG 2.1 AAA</strong>, kiến trúc mã nguồn <strong>Semantic HTML5</strong> 
+          và trải nghiệm mượt mà với <strong>Modern CSS</strong>.
+        </p>
+        <nav class="hero-actions" aria-label="Thao tác nhanh">
+          <a href="#projects" class="button button--primary">Xem Dự Án Của Tôi</a>
+          <a href="#contact" class="button button--secondary">Trao Đổi Công Việc</a>
+        </nav>
+      </div>
+
+      <figure class="profile-figure">
+        <img 
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" 
+          alt="Chân dung Nguyễn Trọng Hùng - Junior Frontend Engineer" 
+          class="profile-avatar"
+          width="360" 
+          height="360"
+          loading="eager"
+        >
+        <figcaption class="profile-caption">
+          <strong>Nguyễn Trọng Hùng</strong> — Junior Frontend Engineer tại TP. Hồ Chí Minh
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="section-title">Về Bản Thân Tôi</h2>
+      <p class="section-intro">
+        Với tư duy lập trình hiện đại và tinh thần học hỏi không ngừng, 
+        tôi tin rằng một website chất lượng cao bắt đầu từ một bộ khung Semantic HTML vững chắc và một hệ thống CSS có cấu trúc rõ ràng.
+      </p>
+
+      <div class="about-grid">
+        <article class="bio-article">
+          <h3>Hành Trình Chuyên Môn</h3>
+          <p>
+            Tôi đam mê xây dựng các giao diện web trực quan, sạch sẽ và tối ưu hiệu năng. 
+            Trong quá trình rèn luyện và thực chiến qua các dự án, tôi luôn đặt trọng tâm vào <mark>khả năng truy cập (Accessibility)</mark>, 
+            tốc độ tải trang nhanh và tuân thủ các quy chuẩn viết mã sạch.
+          </p>
+          <p>
+            Đối với tôi, viết code đúng ngữ nghĩa giúp nâng cao trải nghiệm người dùng, 
+            hỗ trợ tối ưu cho các công cụ tìm kiếm (SEO) và giúp các thành viên trong đội ngũ phát triển dễ dàng cộng tác, bảo trì.
+          </p>
+        </article>
+
+        <aside class="bio-aside" aria-labelledby="aside-heading">
+          <h3 id="aside-heading">Thông Tin Nhanh</h3>
+          <ul class="facts-list">
+            <li><strong>Chuyên môn:</strong> Semantic HTML5, Modern CSS, BEM, JavaScript, Responsive Web Design</li>
+            <li><strong>Vị trí hiện tại:</strong> TP. Hồ Chí Minh (Sẵn sàng làm việc Onsite / Remote)</li>
+            <li><strong>Mục tiêu:</strong> Trở thành Senior Frontend Architect xây dựng các ứng dụng web quy mô lớn</li>
+            <li><strong>Nguyên tắc làm việc:</strong> Clean Code, Semantic First, Pixel Perfect</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="section-title">Kỹ Năng Kỹ Thuật</h2>
+      <p class="section-intro">Các công nghệ cốt lõi tôi áp dụng để xây dựng giao diện web chuẩn mực.</p>
+
+      <ul class="skills-grid">
+        <li class="skill-card">
+          <h3>HTML5 &amp; Semantic Web</h3>
+          <p>Cấu trúc tài liệu chuẩn WCAG, a11y landmarks, SEO metadata, tối ưu cấu trúc DOM không dùng div thừa.</p>
+        </li>
+        <li class="skill-card">
+          <h3>Modern CSS &amp; BEM</h3>
+          <p>CSS Grid, Flexbox, Custom Properties (Variables), phương pháp luận BEM, hiệu ứng chuyển động mượt mà.</p>
+        </li>
+        <li class="skill-card">
+          <h3>JavaScript Core</h3>
+          <p>Cú pháp ES6+, xử lý bất đồng bộ, thao tác DOM API thuần, clean code và tư duy thuật toán.</p>
+        </li>
+        <li class="skill-card">
+          <h3>Responsive Web Design</h3>
+          <p>Thiết kế tương thích đa thiết bị theo tư duy Mobile-First, tối ưu kích thước tài nguyên và hiệu năng hiển thị.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="section-title">Dự Án Tiêu Biểu</h2>
+      <p class="section-intro">Các dự án độc lập thể hiện năng lực kiến trúc giao diện người dùng và tối ưu hiệu năng.</p>
+
+      <div class="projects-grid">
+        <article class="project-card" aria-labelledby="proj-1-title">
+          <figure class="project-figure">
+            <img 
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" 
+              alt="Giao diện bảng điều khiển phân tích tài chính Nova Analytics Dashboard" 
+              class="project-image"
+              loading="lazy"
+            >
+            <figcaption class="project-caption">Dự án 01: Nova SaaS Analytics Platform</figcaption>
+          </figure>
+          <div class="project-body">
+            <time class="project-time" datetime="2025-08">Tháng 08/2025</time>
+            <h3 id="proj-1-title" class="project-name">Nova SaaS Analytics Dashboard</h3>
+            <p class="project-desc">
+              Hệ thống dashboard phân tích số liệu thời gian thực với biểu đồ tương tác, chế độ Dark Mode tối ưu và độ phản hồi tức thì.
+            </p>
+            <ul class="project-tags" aria-label="Công nghệ sử dụng trong dự án Nova">
+              <li>HTML5 Semantic</li>
+              <li>CSS Grid</li>
+              <li>BEM</li>
+              <li>JavaScript</li>
+            </ul>
+            <a href="#" class="project-link" aria-label="Xem chi tiết dự án Nova SaaS Analytics Dashboard">Xem Chi Tiết Dự Án</a>
+          </div>
+        </article>
+
+        <article class="project-card" aria-labelledby="proj-2-title">
+          <figure class="project-figure">
+            <img 
+              src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" 
+              alt="Giao diện trang thương mại điện tử thời trang Lumina Minimal E-Commerce" 
+              class="project-image"
+              loading="lazy"
+            >
+            <figcaption class="project-caption">Dự án 02: Lumina Minimalist E-Commerce</figcaption>
+          </figure>
+          <div class="project-body">
+            <time class="project-time" datetime="2025-02">Tháng 02/2025</time>
+            <h3 id="proj-2-title" class="project-name">Lumina Minimal E-Commerce</h3>
+            <p class="project-desc">
+              Cửa hàng trực tuyến tối giản với bộ lọc sản phẩm mượt mà, hỗ trợ screen-reader 100% và chỉ số hiệu năng cao.
+            </p>
+            <ul class="project-tags" aria-label="Công nghệ sử dụng trong dự án Lumina">
+              <li>Modern CSS</li>
+              <li>Vanilla JS</li>
+              <li>Flexbox</li>
+              <li>Accessibility</li>
+            </ul>
+            <a href="#" class="project-link" aria-label="Xem chi tiết dự án Lumina Minimal E-Commerce">Xem Chi Tiết Dự Án</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience" aria-labelledby="exp-heading">
+      <h2 id="exp-heading" class="section-title">Kinh Nghiệm &amp; Quá Trình Phát Triển</h2>
+      <p class="section-intro">Hành trình trau dồi chuyên môn và tham gia phát triển các sản phẩm web.</p>
+
+      <ol class="timeline-list">
+        <li class="timeline-item">
+          <article class="timeline-card">
+            <header class="timeline-header">
+              <h3 class="timeline-role">Junior Frontend Engineer</h3>
+              <p class="timeline-company">TechNova Solutions Corp</p>
+              <time class="timeline-period" datetime="2024-01/2026-09">Tháng 01/2024 — Hiện tại</time>
+            </header>
+            <p class="timeline-desc">
+              Tham gia phát triển các component UI tái sử dụng, chuẩn hóa HTML Semantic và Modern CSS theo chuẩn BEM giúp tối ưu khả năng bảo trì mã nguồn.
+            </p>
+          </article>
+        </li>
+
+        <li class="timeline-item">
+          <article class="timeline-card">
+            <header class="timeline-header">
+              <h3 class="timeline-role">Frontend Trainee Developer</h3>
+              <p class="timeline-company">Nexus Digital Studio</p>
+              <time class="timeline-period" datetime="2023-06/2023-12">Tháng 06/2023 — Tháng 12/2023</time>
+            </header>
+            <p class="timeline-desc">
+              Thực hành xây dựng các trang landing page chuẩn responsive, tối ưu SEO Technical và cộng tác làm việc theo chuẩn Git Flow.
+            </p>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="section-title">Kết Nối Với Tôi</h2>
+      <p class="section-intro">Tôi luôn sẵn sàng kết nối và trao đổi về các cơ hội nghề nghiệp cũng như hợp tác dự án.</p>
+
+      <address class="contact-card">
+        <ul class="contact-methods">
+          <li class="contact-item">
+            <div class="contact-details">
+              <strong>Email:</strong>
+              <a href="mailto:tronghung.frontend@gmail.com">tronghung.frontend@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-details">
+              <strong>Số điện thoại:</strong>
+              <a href="tel:+84909123456">+84 (0) 909 123 456</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-details">
+              <strong>Địa chỉ làm việc:</strong>
+              <span>Quận 1, Thành phố Hồ Chí Minh, Việt Nam</span>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="contact-details">
+              <strong>Mạng xã hội nghề nghiệp:</strong>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a> |
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            </div>
+          </li>
+        </ul>
+      </address>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="copyright">
+        &copy; 2026 <strong>Nguyễn Trọng Hùng</strong>. Xây dựng bằng <em>Semantic HTML5</em> và <em>Modern CSS</em>.
+      </p>
+      <nav class="footer-nav" aria-label="Điều hướng chân trang">
+        <a href="#top" class="footer-link">Lên đầu trang</a>
+        <a href="../index.html" class="footer-link">Về Trang Tổng Hợp HTML &amp; Modern CSS</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

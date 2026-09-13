@@ -10,6 +10,7 @@ Repository chứa tất cả các bài tập và dự án thực hành trong kh�
 | :--- | :--- | :--- | :--- |
 | **01** | [`01-git-workflows`](./01-git-workflows) | Thực hành Git Workflow, Conventional Commits, PR End-to-End & Resolve Conflict | ✅ Completed |
 | **02** | [`02-semantic-tailwind`](./02-semantic-tailwind) | Semantic Web HTML5 Landmark & Tailwind CSS Utility Components (Hero & Card Block) | 🚀 In Progress |
+| **03** | [`03-HTML & Modern CSS`](./03-HTML%20%26%20Modern%20CSS) | Khung HTML Ngữ Nghĩa (Portfolio) & Pricing Section Responsive BEM Modern CSS | ✅ Completed |
 
 ---
 

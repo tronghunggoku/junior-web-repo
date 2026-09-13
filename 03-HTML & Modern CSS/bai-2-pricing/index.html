@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bảng giá dịch vụ phần mềm SaaS - Pricing Section Responsive chuẩn BEM và Modern CSS.">
+  <title>Pricing Plans | SaaS Modern Pricing Section (BEM &amp; Modern CSS)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+    <div class="pricing__container">
+
+      <header class="pricing__header">
+        <span class="pricing__badge">Bảng Giá Minh Bạch</span>
+        <h1 id="pricing-title" class="pricing__title">Chọn Gói Cước Phù Hợp Cho Doanh Nghiệp Bạn</h1>
+        <p class="pricing__description">
+          Khởi đầu miễn phí, nâng cấp linh hoạt khi dự án của bạn phát triển. Không có phí ẩn, hủy bất kỳ lúc nào.
+        </p>
+
+        <div class="pricing__toggle" role="group" aria-label="Lựa chọn chu kỳ thanh toán">
+          <span class="pricing__toggle-label pricing__toggle-label--active" id="label-monthly">Theo Tháng</span>
+          <button 
+            type="button" 
+            class="pricing__toggle-switch" 
+            id="billingToggle" 
+            aria-pressed="false" 
+            aria-label="Chuyển đổi giữa trả theo tháng và trả theo năm"
+          >
+            <span class="pricing__toggle-slider"></span>
+          </button>
+          <span class="pricing__toggle-label" id="label-yearly">
+            Theo Năm 
+            <span class="pricing__discount-pill">Tiết kiệm 20%</span>
+          </span>
+        </div>
+      </header>
+
+      <div class="pricing__grid">
+
+        <article class="pricing-card">
+          <div class="pricing-card__header">
+            <h2 class="pricing-card__name">Starter</h2>
+            <p class="pricing-card__description">Dành cho cá nhân, freelancer hoặc dự án thử nghiệm ban đầu.</p>
+          </div>
+
+          <div class="pricing-card__price-box">
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">₫</span>
+              <span class="pricing-card__amount" data-monthly="290.000" data-yearly="230.000">290.000</span>
+            </div>
+            <span class="pricing-card__period">/ tháng (thanh toán hàng tháng)</span>
+          </div>
+
+          <div class="pricing-card__divider" role="separator"></div>
+
+          <div class="pricing-card__features-group">
+            <p class="pricing-card__features-title">Gói này bao gồm:</p>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Tối đa <strong>3 Dự Án</strong> hoạt động</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">5GB Dung lượng lưu trữ Cloud</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Báo cáo phân tích cơ bản</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--disabled">
+                <span class="pricing-card__item-text">Tùy biến tên miền riêng</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--disabled">
+                <span class="pricing-card__item-text">Hỗ trợ ưu tiên 24/7 SLA</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pricing-card__footer">
+            <button type="button" class="pricing-card__cta pricing-card__cta--outline">
+              Bắt Đầu Trải Nghiệm
+            </button>
+            <p class="pricing-card__guarantee">Miễn phí 14 ngày dùng thử</p>
+          </div>
+        </article>
+
+        <article class="pricing-card pricing-card--popular">
+          <div class="pricing-card__popular-badge">
+            <span>Phổ Biến Nhất</span>
+          </div>
+
+          <div class="pricing-card__header">
+            <h2 class="pricing-card__name">Professional</h2>
+            <p class="pricing-card__description">Tối ưu cho đội ngũ phát triển sản phẩm &amp; doanh nghiệp đang scale.</p>
+          </div>
+
+          <div class="pricing-card__price-box">
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">₫</span>
+              <span class="pricing-card__amount" data-monthly="690.000" data-yearly="550.000">690.000</span>
+            </div>
+            <span class="pricing-card__period">/ tháng (thanh toán hàng tháng)</span>
+          </div>
+
+          <div class="pricing-card__divider" role="separator"></div>
+
+          <div class="pricing-card__features-group">
+            <p class="pricing-card__features-title">Tất cả quyền lợi của Starter, cộng thêm:</p>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text"><strong>Không giới hạn</strong> số lượng Dự Án</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">50GB Lưu trữ tốc độ cao SSD NVMe</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Tùy biến Custom Domain &amp; SSL Free</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Phân tích chuyên sâu &amp; AI Insights</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Hỗ trợ qua Livechat phản hồi nhanh</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pricing-card__footer">
+            <button type="button" class="pricing-card__cta pricing-card__cta--primary">
+              Nâng Cấp Gói Pro Ngay
+            </button>
+            <p class="pricing-card__guarantee">Cam kết hoàn tiền 30 ngày không cần lý do</p>
+          </div>
+        </article>
+
+        <article class="pricing-card">
+          <div class="pricing-card__header">
+            <h2 class="pricing-card__name">Enterprise</h2>
+            <p class="pricing-card__description">Bảo mật cấp ngân hàng, hạ tầng chuyên dụng và SLA cam kết.</p>
+          </div>
+
+          <div class="pricing-card__price-box">
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">₫</span>
+              <span class="pricing-card__amount" data-monthly="1.890.000" data-yearly="1.490.000">1.890.000</span>
+            </div>
+            <span class="pricing-card__period">/ tháng (thanh toán hàng tháng)</span>
+          </div>
+
+          <div class="pricing-card__divider" role="separator"></div>
+
+          <div class="pricing-card__features-group">
+            <p class="pricing-card__features-title">Giải pháp doanh nghiệp toàn diện:</p>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Mọi tính năng của Pro không giới hạn</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Dung lượng lưu trữ Dedicated không giới hạn</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Đăng nhập một lần (SSO / SAML)</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Cam kết Uptime 99.99% theo hợp đồng SLA</span>
+              </li>
+              <li class="pricing-card__item pricing-card__item--included">
+                <span class="pricing-card__item-text">Kỹ sư giải pháp chuyên trách</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pricing-card__footer">
+            <button type="button" class="pricing-card__cta pricing-card__cta--outline">
+              Liên Hệ Đội Ngũ Bán Hàng
+            </button>
+            <p class="pricing-card__guarantee">Tùy biến hợp đồng theo nhu cầu</p>
+          </div>
+        </article>
+
+      </div>
+
+      <footer class="pricing__footer-nav">
+        <p>Bạn cần giải pháp thiết kế riêng cho tổ chức lớn? <a href="mailto:sales@example.com" class="pricing__contact-link">Trò chuyện với chuyên gia tư vấn</a></p>
+        <p class="pricing__back-home"><a href="../index.html">Về Trang Hub Tổng Hợp HTML &amp; Modern CSS</a></p>
+      </footer>
+
+    </div>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById('billingToggle');
+    const labelMonthly = document.getElementById('label-monthly');
+    const labelYearly = document.getElementById('label-yearly');
+    const amounts = document.querySelectorAll('.pricing-card__amount');
+    const periods = document.querySelectorAll('.pricing-card__period');
+
+    let isYearly = false;
+
+    toggleBtn.addEventListener('click', () => {
+      isYearly = !isYearly;
+      toggleBtn.classList.toggle('pricing__toggle-switch--active', isYearly);
+      toggleBtn.setAttribute('aria-pressed', isYearly);
+
+      if (isYearly) {
+        labelMonthly.classList.remove('pricing__toggle-label--active');
+        labelYearly.classList.add('pricing__toggle-label--active');
+        
+        amounts.forEach(el => {
+          el.textContent = el.getAttribute('data-yearly');
+        });
+        periods.forEach(el => {
+          el.textContent = '/ tháng (thanh toán hàng năm)';
+        });
+      } else {
+        labelYearly.classList.remove('pricing__toggle-label--active');
+        labelMonthly.classList.add('pricing__toggle-label--active');
+        
+        amounts.forEach(el => {
+          el.textContent = el.getAttribute('data-monthly');
+        });
+        periods.forEach(el => {
+          el.textContent = '/ tháng (thanh toán hàng tháng)';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

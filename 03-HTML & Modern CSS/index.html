@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thư mục bài tập HTML & Modern CSS - Semantic Web và Modern CSS (BEM Architecture & Pricing Section)">
+  <title>Bài Tập Về Nhà | HTML &amp; Modern CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --accent: #06b6d4;
+      --emerald: #10b981;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem 5rem;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.2) 0%, transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .hub-container {
+      max-width: 1080px;
+      width: 100%;
+    }
+
+    .hub-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .hub-badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hub-title {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hub-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .hub-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hub-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .hub-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .hub-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-top {
+      margin-bottom: 2rem;
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary-light);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .card-summary {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlights-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlights-list li {
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .highlights-list li::before {
+      content: '✓';
+      color: var(--emerald);
+      font-weight: 700;
+    }
+
+    .hub-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0.95rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .hub-btn:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+    }
+
+    .theory-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+    }
+
+    .theory-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .theory-box p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .tags-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tag-badge {
+      background: rgba(99, 102, 241, 0.12);
+      color: var(--primary-light);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="hub-container">
+    <header class="hub-header">
+      <span class="hub-badge">HTML &amp; Modern CSS</span>
+      <h1 class="hub-title">HTML5 Semantics &amp; Modern CSS Architecture</h1>
+      <p class="hub-desc">
+        Bộ giải pháp toàn diện cho 2 bài tập về nhà của Nguyễn Trọng Hùng (Junior Frontend Engineer): 
+        Khung HTML ngữ nghĩa trang giới thiệu bản thân và Bảng giá Pricing Section Responsive chuẩn BEM.
+      </p>
+    </header>
+
+    <div class="cards-grid">
+      <article class="hub-card">
+        <div class="card-top">
+          <span class="card-tag">Bài Tập 01</span>
+          <h2 class="card-title">Portfolio Giới Thiệu Bản Thân</h2>
+          <p class="card-summary">
+            Xây dựng khung HTML ngữ nghĩa chuẩn 100% không lạm dụng thẻ <code>&lt;div&gt;</code>. 
+            Tối ưu khả năng tiếp cận (a11y) và chỉ số chuẩn SEO cho công cụ tìm kiếm.
+          </p>
+          <ul class="highlights-list">
+            <li>Sử dụng triệt để <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code></li>
+            <li>Ảnh đại diện ngữ nghĩa với <code>&lt;figure&gt;</code> &amp; <code>&lt;figcaption&gt;</code></li>
+            <li>Sidebar thông tin bổ trợ với thẻ <code>&lt;aside&gt;</code></li>
+            <li>Thông tin liên hệ đạt chuẩn với <code>&lt;address&gt;</code></li>
+            <li>Mốc thời gian chuẩn máy đọc với <code>&lt;time datetime="..."&gt;</code></li>
+          </ul>
+        </div>
+        <a href="bai-1-portfolio/index.html" class="hub-btn">Mở Demo Bài 1</a>
+      </article>
+
+      <article class="hub-card">
+        <div class="card-top">
+          <span class="card-tag">Bài Tập 02</span>
+          <h2 class="card-title">Pricing Section Chuẩn BEM</h2>
+          <p class="card-summary">
+            Dựng bảng giá dịch vụ hiện đại kết hợp CSS Grid đa tầng và Flexbox định vị nút CTA. 
+            Đặt tên class theo phương pháp luận BEM và micro-interactions hover mượt mà.
+          </p>
+          <ul class="highlights-list">
+            <li>100% tuân thủ cấu trúc class <code>Block__Element--Modifier</code></li>
+            <li>Bố cục CSS Grid responsive 3 cột tự động co giãn</li>
+            <li>Flexbox căn lề nút bấm thẳng hàng hoàn hảo</li>
+            <li>Hiệu ứng hover nâng card và viền sáng mượt mà</li>
+            <li>Bộ chuyển đổi chu kỳ thanh toán Tháng / Năm mượt mà</li>
+          </ul>
+        </div>
+        <a href="bai-2-pricing/index.html" class="hub-btn">Mở Demo Bài 2</a>
+      </article>
+    </div>
+
+    <section class="theory-box">
+      <h2>Tài Liệu Lý Thuyết Đi Kèm (README.md)</h2>
+      <p>
+        Tất cả kiến thức lý thuyết về <strong>5 thẻ ngữ nghĩa cốt lõi</strong> (khi nào nên dùng và khi nào KHÔNG nên dùng), 
+        cùng triết lý đặt tên theo <strong>chuẩn BEM</strong> và kỹ thuật xử lý layout với Grid/Flexbox đã được tổng hợp chi tiết trong tài liệu:
+      </p>
+      <div class="tags-cloud">
+        <span class="tag-badge">&lt;main&gt;</span>
+        <span class="tag-badge">&lt;section&gt;</span>
+        <span class="tag-badge">&lt;article&gt;</span>
+        <span class="tag-badge">&lt;figure&gt; &amp; &lt;figcaption&gt;</span>
+        <span class="tag-badge">&lt;aside&gt;</span>
+        <span class="tag-badge">&lt;address&gt;</span>
+        <span class="tag-badge">&lt;time&gt;</span>
+        <span class="tag-badge">BEM: Block__Element--Modifier</span>
+        <span class="tag-badge">CSS Grid &amp; Flexbox</span>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
