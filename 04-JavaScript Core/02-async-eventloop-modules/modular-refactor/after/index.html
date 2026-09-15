@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechGear Store - ES Modules Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="store-app">
+    <header class="navbar">
+      <div class="brand">
+        <div class="brand-text">
+          <span class="brand-name">TechGear Store</span>
+          <span class="brand-tag">Refactored to Clean ES Modules</span>
+        </div>
+      </div>
+      <div class="nav-controls">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Tìm kiếm gear, bàn phím, chuột...">
+        </div>
+        <select id="sortSelect" class="sort-dropdown">
+          <option value="price-asc">Giá: Thấp đến Cao</option>
+          <option value="price-desc">Giá: Cao đến Thấp</option>
+          <option value="rating-desc">Đánh giá: Cao nhất</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="layout-main">
+      <section class="products-section">
+        <div class="tabs-container" id="category-tabs"></div>
+
+        <div id="loadingState" class="loading-state">
+          <div class="spinner"></div>
+          <p>Đang tải dữ liệu sản phẩm từ API...</p>
+        </div>
+
+        <div class="products-grid" id="products-grid"></div>
+      </section>
+
+      <aside class="cart-sidebar">
+        <div class="cart-card">
+          <div class="cart-header">
+            <h3>Giỏ hàng của bạn</h3>
+            <button id="btnClearCart" class="btn-clear-cart">Xóa tất cả</button>
+          </div>
+
+          <div class="cart-items-list" id="cart-items-container"></div>
+
+          <div class="cart-totals" id="cart-totals-container"></div>
+
+          <button class="btn-checkout" onclick="alert('Cảm ơn bạn đã đặt hàng qua Demo Modular App!')">
+            Tiến hành thanh toán
+          </button>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

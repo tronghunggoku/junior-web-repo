@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benchmark: Fetch Tuần Tự vs Song Song (Promise.all)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="header">
+      <div class="badge">JavaScript Asynchronous Benchmark</div>
+      <h1>So Sánh Fetch Tuần Tự vs Song Song</h1>
+      <p class="subtitle">Trực quan hóa tốc độ thực thi giữa vòng lặp <code>for...of + await</code> và <code>Promise.all()</code> / <code>Promise.allSettled()</code></p>
+    </header>
+
+    <section class="control-card">
+      <div class="control-header">
+        <h2>Tùy chọn kiểm thử</h2>
+        <div class="toggle-wrapper">
+          <label class="switch">
+            <input type="checkbox" id="simulateErrorToggle">
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label">Mô phỏng 1 Request bị lỗi (Fail Simulation)</span>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button id="btnSequential" class="btn btn-sequential">
+          <span>1. Chạy Tuần Tự (Sequential)</span>
+        </button>
+        <button id="btnParallelAll" class="btn btn-parallel">
+          <span>2. Chạy Song Song (Promise.all)</span>
+        </button>
+        <button id="btnParallelSettled" class="btn btn-settled">
+          <span>3. Chạy Song Song (Promise.allSettled)</span>
+        </button>
+        <button id="btnReset" class="btn btn-outline">
+          <span>Reset</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="results-grid">
+      <div class="metric-card" id="cardSequential">
+        <div class="metric-header">
+          <h3>Fetch Tuần Tự</h3>
+          <span class="status-tag status-idle" id="statusSeq">Chưa chạy</span>
+        </div>
+        <div class="time-display" id="timeSeq">0.00 <small>ms</small></div>
+        <p class="metric-desc">Thời gian = Tổng thời gian của từng request cộng dồn.</p>
+      </div>
+
+      <div class="metric-card" id="cardParallel">
+        <div class="metric-header">
+          <h3>Promise.all (Song song)</h3>
+          <span class="status-tag status-idle" id="statusPar">Chưa chạy</span>
+        </div>
+        <div class="time-display" id="timePar">0.00 <small>ms</small></div>
+        <p class="metric-desc">Thời gian xấp xỉ thời gian của request lâu nhất.</p>
+      </div>
+
+      <div class="metric-card metric-highlight" id="cardSpeedup">
+        <div class="metric-header">
+          <h3>Mức độ tối ưu (Speedup)</h3>
+          <span class="status-tag status-success">Hiệu suất</span>
+        </div>
+        <div class="time-display highlight-value" id="speedupVal">0x</div>
+        <p class="metric-desc" id="speedupDesc">Hãy chạy cả 2 chế độ để so sánh tốc độ.</p>
+      </div>
+    </div>
+
+    <div class="layout-grid">
+      <section class="visualizer-card">
+        <h2>Tiến trình các Requests</h2>
+        <div id="requestsContainer" class="requests-list"></div>
+      </section>
+
+      <section class="console-card">
+        <div class="console-header">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="terminal-title">Live Execution Logs</span>
+          <button id="btnClearLog" class="btn-clear">Xóa log</button>
+        </div>
+        <pre id="logOutput" class="console-body"></pre>
+      </section>
+    </div>
+
+    <section class="notes-card">
+      <h3>Bài học rút ra từ thực tế:</h3>
+      <ul>
+        <li><strong>Dùng Promise.all:</strong> Khi các request độc lập dữ liệu (ví dụ: lấy song song Profile, Notification, và Cart). Tốc độ tăng gấp nhiều lần so với tuần tự.</li>
+        <li><strong>Dùng Promise.allSettled:</strong> Khi muốn hoàn thành tất cả request dù có 1 vài request phụ bị lỗi.</li>
+        <li><strong>Dùng Vòng for + await:</strong> Khi request thứ 2 cần dữ liệu từ request thứ 1, hoặc khi cần hạn chế tải lên server.</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
