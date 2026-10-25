@@ -12,6 +12,8 @@ Repository chứa tất cả các bài tập và dự án thực hành trong kh�
 | **02** | [`02-semantic-tailwind`](./02-semantic-tailwind) | Semantic Web HTML5 Landmark & Tailwind CSS Utility Components (Hero & Card Block) | 🚀 In Progress |
 | **03** | [`03-HTML & Modern CSS`](./03-HTML%20%26%20Modern%20CSS) | Khung HTML Ngữ Nghĩa (Portfolio) & Pricing Section Responsive BEM Modern CSS | ✅ Completed |
 | **04** | [`04-JavaScript Core`](./04-JavaScript%20Core) | JavaScript Core: Closure, Array Methods vs Vòng for, This Binding, Async Fetch (Sequential vs Promise.all), Event Loop Q&A & ES Modules Refactoring | ✅ Completed |
+| **05** | [`05-State Management`](./05-State%20Management) | Zustand store có persist + tách slice, Redux Toolkit slice hoàn chỉnh, lý do chọn công cụ & kiến trúc store theo module | ✅ Completed |
+| **06** | [`06-TanStack Query`](./06-TanStack%20Query) | Chuyển fetch thủ công sang `useQuery` + `staleTime`, danh sách lớn phân trang / infinite scroll, kiểm tra không còn request trùng | ✅ Completed |
 
 
 ---
