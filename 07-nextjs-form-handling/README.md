@@ -20,7 +20,7 @@ Gộp 2 bài vào 1 dự án **TechNest Showroom** (Next.js 16 App Router + Type
 ## Cấu trúc
 
 ```text
-07-NextJS Form Handling/
+07-nextjs-form-handling/
 ├── next.config.ts                 # remotePatterns cho next/image
 ├── lighthouse/                    # báo cáo HTML + ảnh chụp điểm
 └── src/
@@ -51,7 +51,7 @@ Gộp 2 bài vào 1 dự án **TechNest Showroom** (Next.js 16 App Router + Type
 ## Chạy
 
 ```bash
-cd "07-NextJS Form Handling"
+cd "07-nextjs-form-handling"
 npm install
 npm run dev        # http://localhost:3000
 npm test           # 21 unit test schema
@@ -151,9 +151,11 @@ npm run lint && npm run typecheck && npm test && npm run build   # tất cả đ
 **Deploy lên Vercel** (Root Directory là thư mục con của repo):
 
 1. Vào [vercel.com/new](https://vercel.com/new) → Import repo `junior-web-repo`.
-2. **Root Directory:** `07-NextJS Form Handling` · Framework: Next.js (tự nhận) → Deploy.
+2. **Root Directory:** `07-nextjs-form-handling` · Framework: Next.js (tự nhận) → Deploy.
 3. Vercel tự cấp `VERCEL_PROJECT_PRODUCTION_URL` → `metadataBase`, canonical và OpenGraph tự dùng domain thật.
 
-Hoặc dùng CLI: `npx vercel login` rồi `npx vercel --prod --cwd "07-NextJS Form Handling"`.
+> Tên thư mục **không được có dấu cách**: Vercel đặt tên serverless function theo đường dẫn thư mục, nên tên cũ `07-NextJS Form Handling` làm deploy lỗi *"A Serverless Function has an invalid name"*. Vì vậy module này đặt tên kebab-case, khác các thư mục 01–06.
+
+Hoặc dùng CLI: `npx vercel login` rồi `npx vercel --prod --cwd "07-nextjs-form-handling"`.
 
 **Link deploy:** _(cập nhật sau khi deploy)_
