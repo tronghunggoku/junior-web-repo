@@ -14,6 +14,7 @@ Repository chứa tất cả các bài tập và dự án thực hành trong kh�
 | **04** | [`04-JavaScript Core`](./04-JavaScript%20Core) | JavaScript Core: Closure, Array Methods vs Vòng for, This Binding, Async Fetch (Sequential vs Promise.all), Event Loop Q&A & ES Modules Refactoring | ✅ Completed |
 | **05** | [`05-State Management`](./05-State%20Management) | Zustand store có persist + tách slice, Redux Toolkit slice hoàn chỉnh, lý do chọn công cụ & kiến trúc store theo module | ✅ Completed |
 | **06** | [`06-TanStack Query`](./06-TanStack%20Query) | Chuyển fetch thủ công sang `useQuery` + `staleTime`, danh sách lớn phân trang / infinite scroll, kiểm tra không còn request trùng | ✅ Completed |
+| **07** | [`07-NextJS Form Handling`](./07-NextJS%20Form%20Handling) | Next.js App Router: SSG/ISR/SSR theo trang, SEO metadata, next/image + next/font, Lighthouse; form đặt lịch nhiều bước RHF + Zod, 14 edge case | ✅ Completed |
 
 
 ---
