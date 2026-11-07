@@ -1,5 +1,7 @@
 # 07 - Next.js App Router & Form Handling
 
+🔗 **Live:** https://junior-web-07-nextjs-form.vercel.app
+
 Gộp 2 bài vào 1 dự án **TechNest Showroom** (Next.js 16 App Router + TypeScript): 4 trang nội dung + form **đặt lịch trải nghiệm** nhiều bước (React Hook Form + Zod). Dữ liệu sản phẩm thật từ [dummyjson.com](https://dummyjson.com).
 
 | Yêu cầu | Đã làm |
@@ -158,4 +160,17 @@ npm run lint && npm run typecheck && npm test && npm run build   # tất cả đ
 
 Hoặc dùng CLI: `npx vercel login` rồi `npx vercel --prod --cwd "07-nextjs-form-handling"`.
 
-**Link deploy:** _(cập nhật sau khi deploy)_
+**Link deploy:** **https://junior-web-07-nextjs-form.vercel.app**
+
+Đã kiểm tra trên bản production:
+
+| Kiểm tra | Kết quả |
+| :-- | :-- |
+| `/`, `/products`, `/products/1`, `/about` | `x-vercel-cache: PRERENDER` (SSG / ISR build sẵn) |
+| `/products/150` (ngoài 12 trang build sẵn) | 200, render lần đầu khi truy cập (ISR on-demand) |
+| `/booking?product=5` | SSR theo request, sản phẩm được điền sẵn |
+| `/products/abc` | 404 |
+| canonical / `og:url` / `og:image` | Dùng domain thật `junior-web-07-nextjs-form.vercel.app` |
+| Gửi form đặt lịch 3 bước | Thành công, Server Action trả mã đặt lịch, không lỗi console |
+
+> Hãy nộp **domain production** ở trên. URL dạng `…-rey2s4rte.vercel.app` là URL riêng của từng lượt deploy, đang bật Deployment Protection nên người ngoài mở sẽ bị chuyển sang trang đăng nhập Vercel.
